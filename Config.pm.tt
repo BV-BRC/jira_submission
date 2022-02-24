@@ -1,0 +1,34 @@
+package Bio::BVBRC::JiraSubmission::Config;
+
+use constant	    jira_endpoint  => '[% jira_endpoint %]';
+use constant	    jira_user	   => '[% jira_user %]';
+use constant	    jira_api_token => '[% jira_api_token %]';
+use constant	    jira_fields    => {
+    summary => 'summary',
+    description => 'description',
+    username => 'customfield_10067',
+    task_id => 'customfield_10060',
+    app_name => 'customfield_10061',
+    submit_time => 'customfield_10062',
+    completion_time => 'customfield_10063',
+    start_time => 'customfield_10064',
+    cluster_status => 'customfield_10065',
+    exit_status => 'customfield_10068',
+    task_status => 'customfield_10069',
+    parameters => 'customfield_10072',
+    task_stdout => 'customfield_10070',
+    task_stderr => 'customfield_10071',
+    website_version => 'customfield_10073',
+    webpage => 'customfield_10074',
+	
+};
+use constant jira_servicedesk => '[% jira_servicedesk %]';
+use constant jira_task_fail_request => '[% jira_task_fail_request %]';
+use constant jira_bug_request => '[% jira_bug_request %]';
+
+
+use base 'Exporter';
+our @EXPORT_OK = qw(jira_endpoint jira_user jira_api_token jira_fields jira_servicedesk jira_task_fail_request jira_bug_request);
+our %EXPORT_TAGS = (all => [@EXPORT_OK]);
+1;
+
