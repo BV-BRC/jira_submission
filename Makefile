@@ -77,7 +77,7 @@ deploy-client: build-libs deploy-libs deploy-scripts deploy-docs
 build-libs:
 	$(TPAGE) $(TPAGE_BUILD_ARGS) $(TPAGE_ARGS) Config.pm.tt > lib/Bio/BVBRC/JiraSubmission/Config.pm
 
-deploy-service: deploy-libs deploy-scripts deploy-service-scripts deploy-specs
+deploy-service: deploy-libs deploy-scripts deploy-service-scripts
 
 deploy-specs:
 	mkdir -p $(TARGET)/services/$(APP_SERVICE)
